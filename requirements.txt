@@ -5,3 +5,4 @@ pandas
 seaborn
 streamlit
 pluggy
+setuptools==0.7.3
