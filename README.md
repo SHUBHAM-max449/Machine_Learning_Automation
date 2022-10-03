@@ -5,6 +5,6 @@
  ### You can apply Machine Learning Algorithms to the dataset 
  Here I am attaching Link to the application 
  Check it out:
- https://machine-learning-automation.herokuapp.com/
+ https://semi-automation.herokuapp.com/
 
   Still working on it............
