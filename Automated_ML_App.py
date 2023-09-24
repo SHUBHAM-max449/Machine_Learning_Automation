@@ -210,7 +210,7 @@ def main():
                 if st.checkbox("COUNT PLOT"):
                     c = st.selectbox("Select  axis:", cleaned_data_for_visualization.columns)
                     c_main = cleaned_data_for_visualization[c]
-                    st.write(sns.countplot(x=c, data=c_main))
+                    st.write(sns.countplot(x=c_main[c]))
                     st.pyplot()
                     plt.grid()
                     plt.xticks(rotation=90)
