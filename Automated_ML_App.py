@@ -202,7 +202,7 @@ def main():
                     x_axis = cleaned_data_for_visualization[x_axis]
                     y_axis = st.selectbox("Select y axis:", cleaned_data_for_visualization.columns)
                     y_axis = cleaned_data_for_visualization[y_axis]
-                    st.write(sns.barplot(x_axis, y_axis))
+                    st.write(sns.barplot(x_axis, y_axis,data=cleaned_data_for_visualization))
                     st.pyplot()
                     plt.xticks(rotation=90)
                     plt.legend()
