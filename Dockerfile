@@ -8,7 +8,12 @@ WORKDIR /app
 COPY . /app
 
 # Install the application dependencies
+RUN pip install --upgrade pip
+RUN pip install --root-user-action=ignore
 RUN pip install -r requirements.txt
+ENV PIP_ROOT_USER_ACTION=ignore
+
+EXPOSE 8080
 
 # Define the entry point for the container
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
