@@ -209,7 +209,7 @@ def main():
                     plt.grid()
                 if st.checkbox("COUNT PLOT"):
                     c = st.selectbox("Select  axis:", cleaned_data_for_visualization.columns)
-                    c_main = cleaned_data_for_visualization[c]
+                    c_main = cleaned_data_for_visualization
                     st.write(sns.countplot(x=c_main[c]))
                     st.pyplot()
                     plt.grid()
