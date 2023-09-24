@@ -1,8 +1,2 @@
-numpy
-scikit-learn
-matplotlib
-pandas
-seaborn
 streamlit
 pluggy
-
