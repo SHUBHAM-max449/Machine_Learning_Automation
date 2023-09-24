@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Define the entry point for the container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "Automated_ML_App.py", "runserver", "0.0.0.0:8080"]
