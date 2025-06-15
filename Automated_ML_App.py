@@ -192,27 +192,26 @@ def main():
                 st.table(cleaned_data.head())
                 st.write("**Data for Visualization:**")
                 st.table(cleaned_data_for_visualization.head())
-                fig, ax = plt.subplots() 
                 if st.checkbox("Correlation"):
                     st.write(sns.heatmap(cleaned_data_for_visualization.corr(),annot=True))
-                    st.pyplot(fig)
-                    st.write(sns.pairplot(cleaned_data_for_visualization,ax=ax))
+                    st.image()
+                    st.write(sns.pairplot(cleaned_data_for_visualization))
                     st.pyplot()
                 if st.checkbox("Bar grapgh"):
                     x_axis = st.selectbox("Select x axis:", cleaned_data_for_visualization.columns)
                     x_axis = cleaned_data_for_visualization[x_axis]
                     y_axis = st.selectbox("Select y axis:", cleaned_data_for_visualization.columns)
                     y_axis = cleaned_data_for_visualization[y_axis]
-                    st.write(sns.barplot(x=x_axis, y=y_axis,data=cleaned_data_for_visualization,ax=ax))
-                    st.pyplot(fig)
+                    st.write(sns.barplot(x=x_axis, y=y_axis,data=cleaned_data_for_visualization))
+                    st.image()
                     plt.xticks(rotation=90)
                     plt.legend()
                     plt.grid()
                 if st.checkbox("COUNT PLOT"):
                     c = st.selectbox("Select  axis:", cleaned_data_for_visualization.columns)
                     c_main = cleaned_data_for_visualization
-                    st.write(sns.countplot(x=c_main[c],ax=ax))
-                    st.pyplot(fig)
+                    st.write(sns.countplot(x=c_main[c]))
+                    st.image()
                     plt.grid()
                     plt.xticks(rotation=90)
                     plt.legend()
@@ -221,7 +220,7 @@ def main():
                     col = st.selectbox("Select 1 column", cleaned_data_for_visualization.columns)
                     pie = cleaned_data_for_visualization[col].value_counts().plot.pie(autopct="%1.1f%%")
                     st.write(pie)
-                    st.pyplot(fig)
+                    st.image()
                 st.write("-----")
                 st.markdown(
                     "<h3 style='text-align: center;font-family:georgia;font-size:32px;color:#8000ff;'>Machine Learning-Model</h3>",
