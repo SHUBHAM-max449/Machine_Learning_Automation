@@ -26,10 +26,10 @@ def main():
         layout="wide",
     )
 
-    st.markdown("<h1 style='text-align: center;font-family:georgia; color:#FFFFFF;'>Semi Automation Model</h1>",
+    st.markdown("<h1 style='text-align: center;font-family:georgia; color:#FFD700;'>Semi Automation Model</h1>",
                 unsafe_allow_html=True)
     st.markdown(
-        "<h3 style='text-align: center;font-family:georgia; color:#000000;'>You're either the one that creats the automation or you're getting automated</h3>",
+        "<h3 style='text-align: center;font-family:georgia; color:#C0C0C0;'>You're either the one that creats the automation or you're getting automated</h3>",
         unsafe_allow_html=True)
 
     choice = st.sidebar.radio('what you want to do',("Data info","Data Cleaning, Visualization and Machine Learning","About"))
