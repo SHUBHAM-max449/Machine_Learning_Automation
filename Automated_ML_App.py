@@ -33,7 +33,7 @@ def main():
         unsafe_allow_html=True)
 
     choice = st.sidebar.radio('what you want to do',("Data info","Data Cleaning, Visualization and Machine Learning","About"))
-    st.sidebar.write("** Please upload valid data set **")
+    st.sidebar.write("**Please upload valid data set**")
     dataset = st.sidebar.file_uploader("Upload file here", type=['csv', 'txt', 'xls'])
 
 
