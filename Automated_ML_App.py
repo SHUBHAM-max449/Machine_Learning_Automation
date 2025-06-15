@@ -203,7 +203,7 @@ def main():
                     y_axis = st.selectbox("Select y axis:", cleaned_data_for_visualization.columns)
                     y_axis = cleaned_data_for_visualization[y_axis]
                     st.write(sns.barplot(x=x_axis, y=y_axis,data=cleaned_data_for_visualization))
-                    st.image()
+                    st.pyplot()
                     plt.xticks(rotation=90)
                     plt.legend()
                     plt.grid()
@@ -211,7 +211,7 @@ def main():
                     c = st.selectbox("Select  axis:", cleaned_data_for_visualization.columns)
                     c_main = cleaned_data_for_visualization
                     st.write(sns.countplot(x=c_main[c]))
-                    st.image()
+                    st.pyplot()
                     plt.grid()
                     plt.xticks(rotation=90)
                     plt.legend()
@@ -220,7 +220,7 @@ def main():
                     col = st.selectbox("Select 1 column", cleaned_data_for_visualization.columns)
                     pie = cleaned_data_for_visualization[col].value_counts().plot.pie(autopct="%1.1f%%")
                     st.write(pie)
-                    st.image()
+                    st.pyplot()
                 st.write("-----")
                 st.markdown(
                     "<h3 style='text-align: center;font-family:georgia;font-size:32px;color:#8000ff;'>Machine Learning-Model</h3>",
