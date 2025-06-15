@@ -48,7 +48,7 @@ def main():
             st.subheader(" **Data column names**")
             column_names=data.columns
             for i in column_names:
-                st.write("*","***",i,"***")
+                st.write(i)
             st.write("---")
             st.subheader(" **Data shape**")
 
