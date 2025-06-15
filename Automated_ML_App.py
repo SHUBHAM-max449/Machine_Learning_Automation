@@ -164,7 +164,7 @@ def main():
                 names = cleaned_data.columns
                 st.write("**Select target column name for Applying ML model**")
                 target = st.selectbox("", names,key="target")
-                st.write("Target:",target)
+                st.write("Target:",**target**)
                 col_names = []
                 for i in cleaned_data.columns:
                     if i != target:
