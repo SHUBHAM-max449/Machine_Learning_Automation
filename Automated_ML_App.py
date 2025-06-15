@@ -194,7 +194,6 @@ def main():
                 st.table(cleaned_data_for_visualization.head())
                 if st.checkbox("Correlation"):
                     st.write(sns.heatmap(cleaned_data_for_visualization.corr(),annot=True))
-                    st.image()
                     st.write(sns.pairplot(cleaned_data_for_visualization))
                     st.pyplot()
                 if st.checkbox("Bar grapgh"):
