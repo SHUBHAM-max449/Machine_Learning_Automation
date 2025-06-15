@@ -15,7 +15,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder,StandardScaler,MinMaxScaler
 from PIL import Image
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
     image = Image.open(
