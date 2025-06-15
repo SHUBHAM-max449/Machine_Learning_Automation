@@ -224,7 +224,7 @@ def main():
                 st.markdown(
                     "<h3 style='text-align: center;font-family:georgia;font-size:32px;color:#8000ff;'>Machine Learning-Model</h3>",
                     unsafe_allow_html=True)
-                st.write("** Do you want to Apply Machine Learning**")
+                st.write("**Do you want to Apply Machine Learning**")
                 tell=st.radio("",("Yes","No"),key=25)
 
                 ml_type=""
@@ -233,7 +233,7 @@ def main():
                 else:
                     ml_type="Regression"
                 if tell=="Yes":
-                    st.write("** After doing Train-Test-Split we have **")
+                    st.write("**After doing Train-Test-Split we have**")
                     X = cleaned_data.drop(labels=target, axis=1)
                     y = cleaned_data[target]
                     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
@@ -251,7 +251,7 @@ def main():
                     st.write("** Do you want to apply Scaling to the data: **")
                     ss = st.radio("", ("Yes", "No"),key="SS")
                     if ss == "Yes":
-                        st.write("** Select which standard scaling you want to use: **")
+                        st.write("**Select which standard scaling you want to use:**")
                         ss_tech = st.radio("", ("Standard Scalar", "Min Max Scalar"),key="SS_tech")
                         if ss_tech == "Standard Scalar":
                             meth = StandardScaler()
@@ -260,7 +260,7 @@ def main():
                             st.write("** Data After Standard Scaling**")
                             st.write(X_train[0:5])
 
-                            st.write("* According to the target Column which you have selected earlier we found that it's a ","**",ml_type,"**"," problem ")
+                            st.write("*According to the target Column which you have selected earlier we found that it's a ","**",ml_type,"**"," problem ")
                             if ml_type=="Classification":
                                 if len(cleaned_data[target].unique())==2:
                                     st.write("**Select the classification Algorithm:**")
@@ -310,7 +310,7 @@ def main():
                                 disp.plot()
                                 st.pyplot()
                             elif ml_type=="Regression":
-                                st.write("** After doing Train-Test-Split we have **")
+                                st.write("**After doing Train-Test-Split we have**")
                                 X = cleaned_data.drop(labels=target, axis=1)
                                 y = cleaned_data[target]
                                 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33,
