@@ -164,7 +164,7 @@ def main():
                 names = cleaned_data.columns
                 st.write("**Select target column name for Applying ML model**")
                 target = st.selectbox("", names,key="target")
-                st.write("Target:",**target**)
+                st.write("Target:",target)
                 col_names = []
                 for i in cleaned_data.columns:
                     if i != target:
@@ -172,7 +172,7 @@ def main():
                 for i in col_names:
                     if len(data[i].unique()) < ((data.shape[0])/100):
                         lst.append(i)
-                st.write("**There are** ", len(lst), " **Categorical column in the dataset **")
+                st.write("**There are** ", len(lst), " **Categorical column in the dataset**")
                 for i in lst:
                     st.write("*", i)
                 st.write("**Select encoding technique:**")
