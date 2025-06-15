@@ -78,7 +78,7 @@ def main():
             st.table(null_val)
             plt.figure(figsize=(5,5))
             st.write(sns.heatmap(data.isnull(),yticklabels=False,cbar=False,cmap='plasma'))
-            st.pyplot()
+            # st.pyplot()
             count = 0
             var=0
             total_col=0
