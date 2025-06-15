@@ -102,7 +102,7 @@ def main():
                     st.table(cleaned_data.head())
                 else:
                     st.write("Since NULL Values are Less than 50% We are not dropping any column")
-                st.write("** Want to see Unique values of a column: **")
+                st.write("**Want to see Unique values of a column:**")
                 yes=st.selectbox("",cleaned_data.columns)
                 if yes is not None:
                     st.write(cleaned_data[yes].unique())
@@ -135,7 +135,7 @@ def main():
                             null_colum_name=st.selectbox("",columns_with_null_values,key=a)
                             a=a+1
                             if len(cleaned_data[null_colum_name].unique()) > 10 :
-                                st.subheader(" ** How you want to handle NUll values for that particular Column: **")
+                                st.subheader(" **How you want to handle NUll values for that particular Column:**")
                                 method_of_treating_null_value = st.selectbox("",['Mean of Values','Median of Values', 'Most Occuring element','Maximum val in column', 'Minimum val in column'],key=b)
                                 b=b+1
                                 if method_of_treating_null_value=='Mean of Values':
@@ -164,7 +164,7 @@ def main():
                 names = cleaned_data.columns
                 st.write("**Select target column name for Applying ML model**")
                 target = st.selectbox("", names,key="target")
-                st.write("Target:", "**", target, "**")
+                st.write("Target:",target)
                 col_names = []
                 for i in cleaned_data.columns:
                     if i != target:
